@@ -7,16 +7,18 @@ public class ProductArrayApplication {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        long[] input0 = new long[]{4,5,6,7,8};
         long[] input1 = new long[]{1,2,3,4,5,6};
         long[] input2 = new long[]{};
         long[] input3 = new long[]{0};
         long[] input4 = new long[]{1};
-        long[] input5 = new long[]{2,1};
+        long[] input5 = new long[]{5,1};
         long[] input6 = null;
         long[] input7 = new long[0];
         long[] input8 = new long[]{1, 2, 0, 0, 5};
         long[] input9 = new long[]{0, 2, 3, 4, 5};
         
+        System.out.println("Probando: " + Arrays.toString(input0) + " - Resultado: " + Arrays.toString(calculateProductArrayBasic(input0)));
         System.out.println("Probando: " + Arrays.toString(input1) + " - Resultado: " + Arrays.toString(calculateProductArrayBasic(input1)));
         System.out.println("Probando: " + Arrays.toString(input2) + " - Resultado: " + Arrays.toString(calculateProductArrayBasic(input2)));
         System.out.println("Probando: " + Arrays.toString(input3) + " - Resultado: " + Arrays.toString(calculateProductArrayBasic(input3)));

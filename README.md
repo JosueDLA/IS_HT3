@@ -39,7 +39,7 @@ ADD IS_HT3-1.0-SNAPSHOT-jar-with-dependencies.jar isht3.jar
 CMD ["java", "-jar", "isht3.jar"]
 ```
 
-## Dependency
+## Maven Dependency
 ```xml
 <build>
     <plugins>

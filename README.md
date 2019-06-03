@@ -27,7 +27,6 @@ Unit Testing Calculating the Product of an Array
 ```
 
 ### Run Docker Image 
-Run josuedla/lab2-estudiantes in port 9001
 ```sh
 > sudo docker run josuedla/isht3
 ```
@@ -42,5 +41,33 @@ CMD ["java", "-jar", "isht3.jar"]
 
 ## Dependency
 ```xml
-
+<build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+                <archive>
+                    <manifest>
+                        <mainClass>gt.edu.umg.ingenieria.sistemas.is_ht3.ProductArrayApplication</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>make-assembly</id>
+                    <!-- this is used for inheritance merges -->
+                    <phase>package</phase>
+                    <!-- bind to the packaging phase -->
+                    <goals>
+                        <goal>single</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
 ```
